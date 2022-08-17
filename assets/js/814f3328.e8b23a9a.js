@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfzrp=self.webpackChunkfzrp||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\u6e2c\u8a66\u516c\u544a","permalink":"/news/test"}]}')}}]);
