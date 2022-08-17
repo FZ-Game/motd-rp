@@ -1,3 +1,8 @@
+---
+title: 規則
+sidebar_position: 1
+---
+
 # F.Z. DarkRP 規則
 
 [TOC]

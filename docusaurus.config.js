@@ -6,25 +6,25 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'F.Z. DarkRP伺服器',
   tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://rp.fz-game.club',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/g_icon.png',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'FZ-Game', // Usually your GitHub org/user name.
+  projectName: 'motd-rp', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hant',
+    locales: ['zh-Hant'],
   },
 
   presets: [
@@ -36,15 +36,18 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
+          routeBasePath: '/',
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/FZ-Game/motd-rp/tree/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
+          path: 'news',
+          routeBasePath: '/news',
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/FZ-Game/motd-rp/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -59,18 +62,28 @@ const config = {
       navbar: {
         title: 'F.Z. DarkRP伺服器',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'F.Z. Server',
           src: 'img/logo.svg',
         },
         items: [
           {
-            to: '/rules',
+            to: '/news',
             position: 'left',
-            label: '規定',
+            label: '公告',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            to: '/rules',
+            position: 'left',
+            label: '規則',
+          },
+          {
+            href: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2840300177',
+            label: 'Steam工作坊',
+            position: 'right',
+          },
+          {
+            href: 'https://discord.gg/rMjY9YJKbt',
+            label: 'Discord',
             position: 'right',
           },
         ],
@@ -79,46 +92,42 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '頁面',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: '規則',
+                to: '/rules',
+              },
+              {
+                label: '常見問答',
+                to: '/qna',
               },
             ],
           },
           {
-            title: 'Community',
+            title: '社群',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/rMjY9YJKbt',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Steam群組',
+                href: 'https://steamcommunity.com/groups/freezonetw',
               },
             ],
           },
           {
-            title: 'More',
+            title: '更多',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: '公告',
+                to: '/news',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} F.Z. Game Club.`,
       },
       prism: {
         theme: lightCodeTheme,
